@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("https://img.freepik.com/photos-premium/fonds-ecran-pour-jeu-violet-neon-contexte-contexte-neon-contexte-fond-ecran-neon-contexte-fond-ecran-fond-ecran-fond-ecran_900370-5433.jpg?w=1380") no-repeat center / cover;
+    padding: 50px 5%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 30px;
+    backdrop-filter: blur(30px);
+    padding-bottom: 100px;
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.logo {
+    font-size: 25px;
+    color: #fdf8f8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    border-bottom: 2px solid transparent;
+    transition: .5s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    border-color: #fff;
+}
+
+/* SECTION HOME */
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    gap: 50px;
+    padding: 120px 5% 0;
+    color: #fff;
+}
+
+.home-detail h1 {
+    font-size: 40px;
+    line-height: 1;
+}
+
+.home-detail h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.home-detail p {
+    margin: 15px 0 25px;
+    max-width: 500px;
+}
+
+.home-detail .download-social {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    background: #fff;
+    border-radius: 40px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .5s;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.social-icons a {
+    display: inline-flex;
+    padding: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: .5s;
+}
+
+.social-icons a:hover {
+    background: #fff;
+    color: #333;
+}
+
+/* IMAGE */
+.home-img .img-box {
+    position: relative;
+    width: 28vw;
+    height: 28vw;
+    border: 2px solid rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.home-img .img-box img {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* SECTIONS */
+section {
+    min-height: 100vh;
+    padding: 100px 5%;
+    color: #fff;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* PROJETS */
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.projet-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #da22a3;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.projet-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.projet-card h3 {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.projet-card p {
+    font-size: 14px;
+}
+
+/* COMPETENCES */
+.competences-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.competence-square {
+    width: 150px;
+    height: auto;
+    border: 2px solid #da22a3;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.competence-square h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.competence-square p,
+.competence-square ul {
+    font-size: 12px;
+}
+
+/* CONTACT */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    color: #fff;
+}
+
+.contact-intro {
+    text-align: center;
+}
+
+.big-title {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.contact-intro p {
+    font-size: 24px;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-box {
+    border: 1px solid #da22a3;
+    width: 100%;
+    max-width: 700px;
+    padding: 32px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #da22a3;
+    background: solid #da22a3;
+    color: #fff;
+}
+
+.button {
+    margin-top: 20px;
+    background-color: #da22a3;
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 32px;
+    border-radius: 8px;
+}
+
+/* Mise en colonne uniquement pour la partie Certifications */
+.certifications .projets-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Agrandissement des cartes uniquement dans Certifications */
+.certifications .projet-card {
+    width: 80%;
+    max-width: 900px;
+    min-height: 350px;
+}
+
+/* Affichage complet des images dans la section Certifications */
+.certifications .projet-card img {
+    height: auto;          /* plus de hauteur fixe */
+    max-height: 500px;     /* limite pour éviter que ça dépasse trop */
+    width: 100%;           /* image sur toute la largeur */
+    object-fit: contain;   /* montre l'image entière */
+    border-radius: 15px;
+}
+
+/* --- Grille responsive pour les compétences --- */
+.competences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    align-items: start;
+    margin-top: 20px;
+    padding: 10px 5px;
+}
+
+/* --- Style des cases : plus d'espace, ombre, texte qui s'adapte --- */
+.competence-square {
+    width: 100%;               /* laisse la grille gérer la largeur */
+    min-height: 180px;
+    padding: 18px;
+    border: 1px solid rgba(218,34,163,0.35);
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* texte aligné à gauche pour lisibilité */
+    text-align: left;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.02);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* petit effet hover pour rendre interactif (optionnel) */
+.competence-square:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* Titres et contenu plus lisibles */
+.competence-square h2 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+    letter-spacing: .2px;
+}
+
+.competence-square p,
+.competence-square ul,
+.competence-square li {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+    color: rgba(255,255,255,0.95);
+}
+
+/* Assurer le retour à la ligne et éviter le débordement */
+.competence-square ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.competence-square li {
+    overflow-wrap: anywhere;   /* coupe les mots trop longs si besoin */
+    word-break: break-word;
+    white-space: normal;
+}
+
+/* Si tu veux que certaines cases soient plus grandes (ex: Gestion de projet) */
+.competence-square.wide {
+    min-height: 220px;
+}
+
+/* --- Effet ombre + hover identique à compétence-square --- */
+.projet-card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    border: 1px solid rgba(218,34,163,0.35);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+
+    /* mêmes ombres et transitions que competence-square */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.02);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.projet-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* --- Style harmonisé pour les cartes de certifications --- */
+.certifications .projet-card {
+    width: 80%;
+    max-width: 900px;
+    min-height: 350px;
+
+    /* même design que competence-square */
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    border: 1px solid rgba(218,34,163,0.35);
+    border-radius: 20px;
+    
+    padding: 20px;
+    color: #fff;
+
+    /* mêmes ombres et animation */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.02);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.certifications .projet-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* images parfaitement visibles mais maintenant cohérentes avec l’ombre */
+.certifications .projet-card img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    border-radius: 15px;
+}
